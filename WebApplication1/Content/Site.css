@@ -7,8 +7,7 @@ body {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding:50px 15px;
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
@@ -17,12 +16,46 @@ input[type="password"] {
     max-width: 280px;
 }
 
+/* Overrides */
+.navContainer:before, .navContainer:after {
+    content: " ";
+    display: table;
+}
+.navContainer:before, .navContainer:after {
+    content: " ";
+    display: table;
+}
+
+.navContainer:after {
+    clear: both;
+}
+.navContainer:before, .navContainer:after {
+    content: " ";
+    display: table;
+}
+.navContainer:after {
+    clear: both;
+}
+.navContainer:before, .navContainer:after {
+    content: " ";
+    display: table;
+}
+
+.navContainer {
+    margin: 0 auto;
+    max-width:970px;
+}
+
+
+
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-    .jumbotron {
+    /*.jumbotron {
         margin-top: 20px;
     }
     .body-content {
         padding: 0;
-    }
+    }*/
 }
