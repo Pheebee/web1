@@ -156,6 +156,46 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\Armstrong.jpg" />
+    <Content Include="Images\Armstrong_sm.png" />
+    <Content Include="Images\Battle.jpg" />
+    <Content Include="Images\Battle_sm.png" />
+    <Content Include="Images\Bowman.jpg" />
+    <Content Include="Images\Bowman_sm.png" />
+    <Content Include="Images\Brinson.jpg" />
+    <Content Include="Images\Brinson_sm.png" />
+    <Content Include="Images\Cofer.jpg" />
+    <Content Include="Images\Cofer_sm.png" />
+    <Content Include="Images\Coffman.jpg" />
+    <Content Include="Images\Coffman_sm.png" />
+    <Content Include="Images\Cunningham.jpg" />
+    <Content Include="Images\Cunningham_sm.png" />
+    <Content Include="Images\default.jpg" />
+    <Content Include="Images\default_sm.png" />
+    <Content Include="Images\Doyle.jpg" />
+    <Content Include="Images\Doyle_sm.png" />
+    <Content Include="Images\East.jpg" />
+    <Content Include="Images\East_sm.png" />
+    <Content Include="Images\Flinton.jpg" />
+    <Content Include="Images\Flinton_sm.png" />
+    <Content Include="Images\Herman.jpg" />
+    <Content Include="Images\Herman_sm.png" />
+    <Content Include="Images\Kezbers.jpg" />
+    <Content Include="Images\Kezbers_sm.png" />
+    <Content Include="Images\Mathis.jpg" />
+    <Content Include="Images\Mathis_sm.png" />
+    <Content Include="Images\Pierce.jpg" />
+    <Content Include="Images\Pierce_sm.png" />
+    <Content Include="Images\Sorrels.jpg" />
+    <Content Include="Images\Sorrels_sm.png" />
+    <Content Include="Images\Stewart.jpg" />
+    <Content Include="Images\Stewart_sm.png" />
+    <Content Include="Images\Sullivan.jpg" />
+    <Content Include="Images\Sullivan_sm.png" />
+    <Content Include="Images\Toussaint.jpg" />
+    <Content Include="Images\Toussaint_sm.png" />
+    <Content Include="Images\Watkins.jpg" />
+    <Content Include="Images\Watkins_sm.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -197,8 +237,11 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="Summary.aspx" />
+    <Content Include="SummaryThanks.aspx" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -256,7 +299,9 @@
     <Compile Include="Benefits.aspx.designer.cs">
       <DependentUpon>Benefits.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\TicketInfo.cs" />
+    <Compile Include="Classes\TicketInfo.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,6 +349,13 @@
     </Compile>
     <Compile Include="Summary.aspx.designer.cs">
       <DependentUpon>Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryThanks.aspx.cs">
+      <DependentUpon>SummaryThanks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SummaryThanks.aspx.designer.cs">
+      <DependentUpon>SummaryThanks.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

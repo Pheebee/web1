@@ -11,6 +11,7 @@ namespace WebApplication1.Account {
     
     
     public partial class Login {
+        
         /// <summary>
         /// ErrorMessage control.
         /// </summary>
@@ -19,7 +20,7 @@ namespace WebApplication1.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder ErrorMessage;
-      
+        
         /// <summary>
         /// FailureText control.
         /// </summary>
@@ -55,23 +56,5 @@ namespace WebApplication1.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox RememberMe;
-        
-        /// <summary>
-        /// RegisterHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
-        
-        /// <summary>
-        /// OpenAuthLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebApplication1.Account.OpenAuthProviders OpenAuthLogin;
     }
 }
