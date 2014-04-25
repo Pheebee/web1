@@ -51,6 +51,7 @@
             </div>
             <div class="navContainer">
                 <div class="navbar-collapse collapse">
+                    <% if(System.Web.HttpContext.Current.User.Identity.IsAuthenticated) {  %>
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/Benefits">Benefits</a></li>
@@ -58,6 +59,7 @@
                         <li><a runat="server" href="~/Summary">Renewal</a></li>
                         <li><a runat="server" href="~/Payments">Payment Types</a></li>
                     </ul>
+                    <% } %>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
@@ -68,7 +70,7 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Manage Account</a></li>
                                 <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Account/Login" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
                             </ul>
                         </LoggedInTemplate>
