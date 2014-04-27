@@ -43,7 +43,7 @@ namespace WebApplication1
                         break;
                     case "P_Option2": playOffChoice = "<strong>Playoff Ticket Renewal:</strong><br />Yes...I want to order my playoff tickets!<br />I choose to pay in advance for all potential Thunder home playoff games with check, cash or credit card. Any credits from games  not played will be automatically applied to my 2014-2015 Thunder season ticket account unless otherwise requested for refund.";
                         break;
-                    case "P_Option3": playOffChoice = "<stong>Playoff Ticket Renewal:</strong><br />I choose to not puchase any 2012 NBA Playoffs tickets and understand my seats will be resold for the 2014 NBA Playoffs.";
+                    case "P_Option3": playOffChoice = "<strong>Playoff Ticket Renewal:</strong><br />I choose to not puchase any 2014 NBA Playoffs tickets and understand my seats will be resold for the 2014 NBA Playoffs.";
                         break;
                 }
             }
@@ -52,7 +52,7 @@ namespace WebApplication1
                 playOffChoice = "";
             }
 
-            selSmry.Text = "<p>For your convenience, here is a summary of your renewal:<br /><br /><strong>Total Balance Due:</strong> $" + String.Format("{0:n}", Convert.ToInt32(UserInfo["FullSeasonTotal"].ToString())) + @"<br /><br /><strong>Season Ticket Renewal:</strong><br />" + tcktChoice + @"<br /><br />" + playOffChoice + @"</p>";
+            selSmry.Text = "<p>For your convenience, here is a summary of your renewal:<br /><br /><strong>Total Balance Due:</strong> <span style='color:#ec503a;'>$" + String.Format("{0:n}", Convert.ToInt32(UserInfo["FullSeasonTotal"].ToString())) + @"</span><br /><br /><strong>Season Ticket Renewal:</strong><br />" + tcktChoice + @"<br /><br />" + playOffChoice + @"</p>";
         }
     }
 }

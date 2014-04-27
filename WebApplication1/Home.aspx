@@ -3,10 +3,22 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>Welcome</h1>
-        <p class="lead">Ticket Renewal</p>
+        
     </div>
-
+    <div class="">
+        <p>Dear <%# UserInfo["Salutation"].ToString() %>,</p>
+		<p>Throughout the past five seasons, we have watched our team develop both on the court and in the community, and during this time we have been humbled by how citizens across the state have welcomed us into their daily lives. We greatly value the connections we maintain with our fans, sponsors and especially our Season Ticket Members.</p>
+		<p>Our players have participated in more than 1,000 authentic experiences throughout our community and played in over 200 games at Amway Center Arena to energetic crowds of 18,203. But the number that matters most to us is: One. Our team - be it players, coaches, staff or fans - are united as one, as together we have built this team's identity around the common core values of hard work, resiliency and community.</p>
+		<p>Your commitment and loyalty have allowed this team and this city to rise together, stand tall and look to the future. With your support, we will work hard to continue to build a first-class, sustainable professional sports organization.</p>
+        <p>Season Ticket Members are the lifeblood of a professional franchise. Your continued support and commitment to the team are extraordinary. I burst with pride at NBA meetings when our season ticket performance is reported, but as impressive as those numbers are, they in no way can describe the energy and passion that our Season Ticket Members deliver every game. We are very fortunate indeed.</p>
+		<p>Thank you for engaging in the renewal process, and please don't hesitate to contact me personally if I can answer any question or provide additional information.</p>
+		<p>Sincerely,<br />
+			<img src="img/CB_sig.png" alt="C. D. Bennett" /></p>
+		<p>Clay T. Owner<br />
+		Chairman and Chief Executive Officer<br />
+		Florida Flames Organization</p>
+    </div>
+    <hr />
     <div class="row">
         <div class="col-md-4">
             <h2>Member Benefits</h2>
@@ -14,7 +26,7 @@
                 Click here to see the exciting benefits of being a season ticket holder.
             </p>
             <p>
-                <a class="btn btn-default" href="Benefits">Go &raquo;</a>
+                <a class="btn btn-warning" href="Benefits">Go &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
@@ -23,7 +35,7 @@
                 Have questions? Contact your Account Representative now.
             </p>
             <p>
-                <a class="btn btn-default" href="Contact">Go &raquo;</a>
+                <a class="btn btn-warning" href="Contact">Go &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
@@ -32,7 +44,7 @@
                 Ready to renew? Click here to see your renewal summary.
             </p>
             <p>
-                <a class="btn btn-default" href="Summary">Go &raquo;</a>
+                <a class="btn btn-warning" href="Summary">Go &raquo;</a>
             </p>
         </div>
     </div>

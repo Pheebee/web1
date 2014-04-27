@@ -1,13 +1,13 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
     padding-top: 50px;
-    padding-bottom: 20px;
 }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding:50px 15px;
+    padding:0 15px 50px 15px;
+    min-height: 600px;
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
@@ -17,6 +17,10 @@ input[type="password"] {
 }
 
 /* Overrides */
+.navbar-inverse {
+    background-color:#000;
+    border-color:#000;
+}
 .navContainer:before, .navContainer:after {
     content: " ";
     display: table;
@@ -46,9 +50,56 @@ input[type="password"] {
     max-width:970px;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFFFFF !important;
+}
+
+/*.jumbotron, .container .jumbotron {
+    background-color:#000;
+    border-radius:5px;
+    height:175px;
+    padding:0;
+    margin-top:15px;
+    min-width: 970px;
+}*/
+
+.imgNoPad {
+    padding:0 !important;
+}
+
+table.radio td {
+    padding-bottom: 10px;
+    vertical-align: top;
+}
+
+/*.footer {
+    background-color:#333333;
+    border-top:3px solid #e84405;
+    color:#fff;
+    min-height:100px;
+    position:relative;
+    z-index:1000;
+    margin:0;
+}
+
+.footer .container {
+    margin-top: 15px;
+}
+
+.btn-warning {
+    background-color:#e84405;
+    color:#fff !important;
+}
 
 
+.roundBrdr {
+    border:1px solid #333;
+    border-radius:7px;
+}
 
+a:link, a:visited {
+    color:#e84405;
+}*/
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

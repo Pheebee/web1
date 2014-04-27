@@ -3,10 +3,10 @@
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+    <h2><%: Title %></h2>
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <section id="loginForm">
                 <div class="form-horizontal">
                     <h4>Use your account ID to log in.</h4>
@@ -17,7 +17,7 @@
                         </p>
                     </asp:PlaceHolder>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="UserName" CssClass="col-md-2 control-label">User name</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="UserName" CssClass="col-md-2 control-label">Account ID</asp:Label>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="UserName" CssClass="form-control" />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName"

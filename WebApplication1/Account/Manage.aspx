@@ -26,7 +26,7 @@
                         <asp:ValidationSummary runat="server" ShowModelStateErrors="true" CssClass="text-danger" />
                         <hr />
                         <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="password" CssClass="col-md-2 control-label">Password</asp:Label>
+                            <asp:Label runat="server" AssociatedControlID="password" CssClass="col-md-4 control-label">Password</asp:Label>
                             <div class="col-md-10">
                                 <asp:TextBox runat="server" ID="password" TextMode="Password" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="password"
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="confirmPassword" CssClass="col-md-2 control-label">Confirm password</asp:Label>
+                            <asp:Label runat="server" AssociatedControlID="confirmPassword" CssClass="col-md-4 control-label">Confirm password</asp:Label>
                             <div class="col-md-10">
                                 <asp:TextBox runat="server" ID="confirmPassword" TextMode="Password" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="confirmPassword"
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
+                            <div class="col-md-10">
                                 <asp:Button runat="server" Text="Set Password" ValidationGroup="SetPassword" OnClick="SetPassword_Click" CssClass="btn btn-default" />
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                         
                         <asp:ValidationSummary runat="server" ShowModelStateErrors="true" CssClass="text-danger" />
                         <div class="form-group">
-                            <asp:Label runat="server" ID="CurrentPasswordLabel" AssociatedControlID="CurrentPassword" CssClass="col-md-2 control-label">Current password</asp:Label>
+                            <asp:Label runat="server" ID="CurrentPasswordLabel" AssociatedControlID="CurrentPassword" CssClass="col-md-4 control-label">Current password</asp:Label>
                             <div class="col-md-4">
                                 <asp:TextBox runat="server" ID="CurrentPassword" TextMode="Password" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="CurrentPassword"
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <asp:Label runat="server" ID="NewPasswordLabel" AssociatedControlID="NewPassword" CssClass="col-md-2 control-label">New password</asp:Label>
+                            <asp:Label runat="server" ID="NewPasswordLabel" AssociatedControlID="NewPassword" CssClass="col-md-4 control-label">New password</asp:Label>
                             <div class="col-md-4">
                                 <asp:TextBox runat="server" ID="NewPassword" TextMode="Password" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="NewPassword"
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <asp:Label runat="server" ID="ConfirmNewPasswordLabel" AssociatedControlID="ConfirmNewPassword" CssClass="col-md-2 control-label">Confirm new password</asp:Label>
+                            <asp:Label runat="server" ID="ConfirmNewPasswordLabel" AssociatedControlID="ConfirmNewPassword" CssClass="col-md-4 control-label">Confirm new password</asp:Label>
                             <div class="col-md-4">
                                 <asp:TextBox runat="server" ID="ConfirmNewPassword" TextMode="Password" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmNewPassword"
@@ -95,8 +95,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-offset-2 col-md-4">
-                                <asp:Button runat="server" Text="Change Password" ValidationGroup="ChangePassword" OnClick="ChangePassword_Click" CssClass="btn btn-default" />
+                            <div class="col-md-4 col-md-offset-1">
+                                <asp:Button runat="server" Text="Change Password" ValidationGroup="ChangePassword" OnClick="ChangePassword_Click" CssClass="btn btn-warning" />
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                 <label class="col-md-3 control-label">Zip </label><asp:TextBox runat="server" ID="zip" CssClass="form-control" ValidationGroup="submit"></asp:TextBox><br />
                 <label class="col-md-3 control-label">Phone </label><asp:TextBox runat="server" ID="phn" CssClass="form-control" ValidationGroup="submit"></asp:TextBox><br />
                 <label class="col-md-3 control-label">Email </label><asp:TextBox runat="server" ID="email" CssClass="form-control" ValidationGroup="submit"></asp:TextBox><br />
-                <asp:Button runat="server" Text="Cancel" CssClass="btn btn-default" OnClick="CancelBtn_Click" CausesValidation="false" /> <asp:Button runat="server" OnClick="UpdateProfile_Click" Text="Update" CssClass="btn btn-default" ValidationGroup="submit" />
+                <asp:Button runat="server" Text="Cancel" CssClass="btn btn-default col-md-offset-1" OnClick="CancelBtn_Click" CausesValidation="false" /> <asp:Button runat="server" OnClick="UpdateProfile_Click" Text="Update" CssClass="btn btn-warning col-md-offset-1" ValidationGroup="submit" />
 
                 <asp:RequiredFieldValidator runat="server" ID="rf1" ControlToValidate="fname" ErrorMessage="Please enter your Full Name" Display="None" ValidationGroup="submit"></asp:RequiredFieldValidator>
                 <asp:RequiredFieldValidator runat="server" ID="rf2" ControlToValidate="add" ErrorMessage="Please enter your Address" Display="None" ValidationGroup="submit"></asp:RequiredFieldValidator>

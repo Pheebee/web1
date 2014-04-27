@@ -40,52 +40,66 @@
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Florida Flames Season Ticket Renewal</a>
-                </div>
-            </div>
-            <div class="navContainer">
-                <div class="navbar-collapse collapse">
-                    <% if(System.Web.HttpContext.Current.User.Identity.IsAuthenticated && System.Web.HttpContext.Current.User.Identity.Name.ToLower() != "admin") {  %>
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/Benefits">Benefits</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/Summary">Renewal</a></li>
-                        <li><a runat="server" href="~/Payments">Payment Types</a></li>
-                    </ul>
-                    <% } %>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Manage Account</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Account/Login" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+                <div class="navbar-header col-md-12">
+                    <div class="pull-left">
+                        <ul class="nav navbar-nav">
+                            <li><a runat="server" href="~/" class="imgNoPad"></a></li>
+                             <% if(System.Web.HttpContext.Current.User.Identity.IsAuthenticated && System.Web.HttpContext.Current.User.Identity.Name.ToLower() != "admin") {  %>
+                            <li><a runat="server" href="~/">Home</a></li>
+                            <li><a runat="server" href="~/Benefits">Benefits</a></li>
+                            <li><a runat="server" href="~/Contact">Contact</a></li>
+                            <li><a runat="server" href="~/Summary">Renewal</a></li>
+                            <li><a runat="server" href="~/Payments">Payment Types</a></li>
+                            <% } %>
+                        </ul>
+                        
+                    </div>
+                    <div class="pull-right">
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <AnonymousTemplate>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                                </ul>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a runat="server" href="~/Account/Manage" title="Manage your account">Manage Account</a></li>
+                                    <li>
+                                        <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Account/Login" OnLoggingOut="Unnamed_LoggingOut" />
+                                    </li>
+                                </ul>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> Florida Flames Association</p>
-            </footer>
+            <%--<hr />--%>
+            
         </div>
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="col-md-4">
+                        <p>&copy; <%: DateTime.Now.Year %> Florida Flames Association</p>
+                    </div>
+                    <div class="col-md-offset-2 col-md-4">
+                        <% if(System.Web.HttpContext.Current.User.Identity.IsAuthenticated && System.Web.HttpContext.Current.User.Identity.Name.ToLower() != "admin") {  %>
+                            <a href="Contact">Contact your Account Representative</a><br />
+                        <% } %>
+                        <a href="http://www.amwaycenter.com/tickets-and-seating/seating-maps" target="_blank">Seating Map</a>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Follow us:</p>
+                        <a href="http://twitter.com" target="_blank"><img src="/Images/icon_Twit_35x35.png" alt="Twitter" /></a>
+                        <a href="http://facebook.com" target="_blank"><img src="/Images/icon_FB_35x35.png" alt="Facebook" /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>

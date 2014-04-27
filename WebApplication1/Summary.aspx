@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Ticket Renewal" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Summary.aspx.cs" Inherits="WebApplication1.Summary" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
+    <asp:Literal runat="server" ID="testMsg"></asp:Literal>
     <asp:Panel runat="server" ID="acntDisabled" Visible="false">
         <div class="alert alert-danger col-md-11">
             IMPORTANT NOTICE: Your account renewal is currently deactivated. Please contact your Account Representative at <%# UserInfo["SalesPhone"].ToString() %> immediately.
@@ -12,10 +13,12 @@
 			    <td><strong>Season Ticket Member:</strong></td>
 			    <td><%# UserInfo["DirectSmile"].ToString() %></td>
 		    </tr>
+            <tr><td>&nbsp;</td></tr>
 		    <tr>
-			    <td><strong>Seating Location(s):</strong></td>
+			    <td style="vertical-align:top;"><strong>Seating Location(s):</strong></td>
 			    <td><%# UserInfo["SeatHTML"].ToString() %></td>
 		    </tr>
+            <tr><td>&nbsp;</td></tr>
 		    <tr>
 			    <td><strong>Account Manager:</strong></td>
 			    <td><%# UserInfo["SalesName"].ToString() %></td>
@@ -60,12 +63,12 @@
     <hr />
         <div>
             <h3>2014-2015 Season Ticket Renewal &amp; 2014 NBA Playoffs Invoice</h3>
-		    <p><strong>Account #: </strong><br />
-			    <strong>[Full Name]</strong><br />
-			    [Address]<br />
-			    [City], [State] [Zip]<br />
+		    <p><strong>Account #: <%# UserInfo["AccountID"].ToString() %></strong><br />
+			    <strong><%# UserInfo["DirectSmile"].ToString() %></strong><br />
+			    <%# AddInfo["Address1"].ToString() %><br />
+			    <%# AddInfo["City"].ToString() %>, <%# AddInfo["State"].ToString() %> <%# AddInfo["Zip"].ToString() %><br />
 			    <strong>Due Date: Friday, March 15, 2014</strong></p>
-            <table class="col-md-10 grid" id="invTbl">
+            <table class="col-md-10 table" id="invTbl">
 		        <thead>
 			        <tr>
 				        <th width="230">Seat Location: </th>
@@ -89,12 +92,13 @@
         </div>
         <div class="clearfix">&nbsp;</div>
         <div class="col-md-12 clearfix">
+            <h4>I. 2014-2015 Season Ticket Payment Plan Option</h4>
             <div class="col-md-8">
-                <h4>I. 2014-2015 Season Ticket Payment Plan Option</h4>
+                
                 <p>
 		    	    <asp:Literal ID="tcktTxt" runat="server" />
 		        </p>
-                <asp:RadioButtonList ID="tcktOpt" runat="server" CssClass="radios"> </asp:RadioButtonList>
+                <asp:RadioButtonList ID="tcktOpt" runat="server" CssClass="radio"></asp:RadioButtonList>
                 <asp:RequiredFieldValidator runat="server" ID="rf1" ControlToValidate="tcktOpt" Display="None" ErrorMessage="Please select a Season Ticket payment plan option."></asp:RequiredFieldValidator>
             </div>
         </div>
@@ -132,7 +136,7 @@
 				    </tr>
 			    </tbody>
 		    </table>
-		    <asp:RadioButtonList ID="PlayoffsOpt" runat="server" CssClass="radios col-md-8"> </asp:RadioButtonList>
+		    <asp:RadioButtonList ID="PlayoffsOpt" runat="server" CssClass="radio col-md-8"> </asp:RadioButtonList>
             <asp:RequiredFieldValidator runat="server" ID="rf2" ControlToValidate="PlayoffsOpt" Display="None" ErrorMessage="Please select a Playoffs option."></asp:RequiredFieldValidator>
         </div>
         <hr />

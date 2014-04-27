@@ -43,15 +43,6 @@
 	    </table>
     </div>
     <hr />
-    <div class="row clearfix col-md-12">
-        <h3>It's as Easy as 1-2-3 to Renew Your Season Tickets &amp; Reserve Your Playoffs Seats!</h3>
-	    <ol>
-		    <li>Choose Your Preferred 2014-2015 Season Ticket Payment Plan Option </li>
-		    <li>Choose Your Preferred 2014 NBA Playoffs Option</li>
-		    <li>Click Submit! </li>
-	    </ol>
-    </div>
-    <hr />
     <div id="tyTxt" runat="server">
 		<p>Thank you for submitting your 2014-2015 Season Ticket and 2014 NBA Playoffs information.<br />
             Our records indicate that you have previously submitted this information.<br />

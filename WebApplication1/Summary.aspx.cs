@@ -21,11 +21,16 @@ namespace WebApplication1
             {
                 if (UserInfo != null) { LoadVariables(); }
                 Page.DataBind();
-                if(UserInfo["AccountActive"].ToString() != "1")
+                if(UserInfo["AccountActive"].ToString() != "True")
                 {
                     acntDisabled.Visible = true;
                     renewFrm.Visible = false;
                 }
+                else
+                {
+                    acntDisabled.Visible = false;
+                }
+                //testMsg.Text = UserInfo["AccountActive"].ToString();
             }
         }
 

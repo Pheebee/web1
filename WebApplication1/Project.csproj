@@ -160,6 +160,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\Armstrong.jpg" />
     <Content Include="Images\Armstrong_sm.png" />
+    <Content Include="Images\ball.jpg" />
     <Content Include="Images\Battle.jpg" />
     <Content Include="Images\Battle_sm.png" />
     <Content Include="Images\Bowman.jpg" />
@@ -180,8 +181,11 @@
     <Content Include="Images\East_sm.png" />
     <Content Include="Images\Flinton.jpg" />
     <Content Include="Images\Flinton_sm.png" />
+    <Content Include="Images\header.jpg" />
     <Content Include="Images\Herman.jpg" />
     <Content Include="Images\Herman_sm.png" />
+    <Content Include="Images\icon_FB_35x35.png" />
+    <Content Include="Images\icon_Twit_35x35.png" />
     <Content Include="Images\Kezbers.jpg" />
     <Content Include="Images\Kezbers_sm.png" />
     <Content Include="Images\Mathis.jpg" />
