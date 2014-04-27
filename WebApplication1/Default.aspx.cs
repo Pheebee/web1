@@ -13,7 +13,7 @@ namespace WebApplication1
         {
             if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                if (User.Identity.Name == "Admin")
+                if (User.Identity.Name.ToLower() == "admin")
                 {
                     Response.Redirect("Administration");
                 }

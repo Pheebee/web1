@@ -33,7 +33,7 @@ namespace WebApplication1.Account
                 if (user != null)
                 {
                     IdentityHelper.SignIn(manager, user, RememberMe.Checked);
-                    IdentityHelper.RedirectToReturnUrl("~/Home", Response);
+                    IdentityHelper.RedirectToReturnUrl("~/Default", Response);
                 }
                 else
                 {

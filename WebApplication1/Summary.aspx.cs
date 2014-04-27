@@ -21,8 +21,12 @@ namespace WebApplication1
             {
                 if (UserInfo != null) { LoadVariables(); }
                 Page.DataBind();
+                if(UserInfo["AccountActive"].ToString() != "1")
+                {
+                    acntDisabled.Visible = true;
+                    renewFrm.Visible = false;
+                }
             }
-            
         }
 
         protected void LoadVariables()
