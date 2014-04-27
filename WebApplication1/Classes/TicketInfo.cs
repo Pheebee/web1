@@ -38,10 +38,37 @@ namespace WebApplication1.Classes
             string cmdText = String.Format("select * from dbo.[usvOKC_GetAll] where AccountID = '{0}'", Convert.ToInt32(User.Identity.GetUserName()));
             SqlCommand cmd = new SqlCommand(cmdText, conn);
 
-            //string cmdText = String.Format("select * from [X-Media_DS].dbo.[usvOKC_GetAll] where AccountID = {0}", Convert.ToInt32(Recipient["CustomerID"]));
-            //SqlCommand cmd = new SqlCommand(cmdText);
+            DataTable table = new DataTable();
+            table.Load(cmd.ExecuteReader());
+            if (table.Rows.Count > 0)
+                return table.Rows[0];
+            return null;
+        }
 
-           // DataTable table = db.ExecuteDataTable("UserInfo", cmd);
+
+        private DataRow addInfo;
+        public DataRow AddInfo
+        {
+            get
+            {
+                if (addInfo == null)
+                {
+                    addInfo = GetAddInfo();
+                }
+                return addInfo;
+            }
+        }
+
+        public DataRow GetAddInfo()
+        {
+            string strConnection = System.Configuration.ConfigurationManager.ConnectionStrings["MySqlConnection"].ToString();
+            SqlConnection conn = new SqlConnection(strConnection);
+            conn.Open();
+
+
+            string cmdText = String.Format("select * from dbo.[UserInformation] where AccountID = '{0}'", Convert.ToInt32(User.Identity.GetUserName()));
+            SqlCommand cmd = new SqlCommand(cmdText, conn);
+
             DataTable table = new DataTable();
             table.Load(cmd.ExecuteReader());
             if (table.Rows.Count > 0)
@@ -76,6 +103,40 @@ namespace WebApplication1.Classes
                     catch (SqlException s)
                     {
                         Trace.Warn("DME Code Trace", s.Message);
+                    }
+                    return 0;
+                }
+            }
+        }
+
+        // Update Profile
+        public int UpdateProfile(string UserName, string FullName, string Address, string City, string St, string Zip, string Phone, string Email)
+        {
+            string strConnection = System.Configuration.ConfigurationManager.ConnectionStrings["MySqlConnection"].ToString();
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("spUpdateUserInformation"))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@AccountID", UserName));
+                    cmd.Parameters.Add(new SqlParameter("@FullName", FullName));
+                    cmd.Parameters.Add(new SqlParameter("@Address1", Address));
+                    cmd.Parameters.Add(new SqlParameter("@City", City));
+                    cmd.Parameters.Add(new SqlParameter("@State", St));
+                    cmd.Parameters.Add(new SqlParameter("@Zip", Zip));
+                    cmd.Parameters.Add(new SqlParameter("@Phone", Phone));
+                    cmd.Parameters.Add(new SqlParameter("@Email", Email));
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.Connection = conn;
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                    catch (SqlException s)
+                    {
+                        //Trace.Warn("DME Code Trace", s.Message);
                     }
                     return 0;
                 }

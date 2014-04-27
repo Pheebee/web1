@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using WebApplication1.Models;
+using WebApplication1.Classes;
 
 namespace WebApplication1.Account
 {
-    public partial class Manage : System.Web.UI.Page
+    public partial class Manage : TicketInfo
     {
         protected string SuccessMessage
         {
@@ -31,6 +32,14 @@ namespace WebApplication1.Account
         {
             if (!IsPostBack)
             {
+                fname.Text = UserInfo["DirectSmile"].ToString();
+                add.Text = AddInfo["Address1"].ToString();
+                city.Text = AddInfo["City"].ToString();
+                st.Text = AddInfo["State"].ToString();
+                zip.Text = AddInfo["Zip"].ToString();
+                phn.Text = AddInfo["Phone"].ToString();
+                email.Text = AddInfo["Email"].ToString();
+
                 // Determine the sections to render
                 UserManager manager = new UserManager();
                 if (HasPassword(manager))
@@ -120,6 +129,24 @@ namespace WebApplication1.Account
             {
                 ModelState.AddModelError("", error);
             }
+        }
+
+        protected void UpdateProfile_Click(object sender, EventArgs e)
+        {
+            UpdateProfile(User.Identity.GetUserName(), fname.Text, add.Text, city.Text, st.Text, zip.Text, phn.Text, email.Text);
+            frmPnl.Visible = false;
+            successPnl.Visible = true;
+        }
+
+        protected void CancelBtn_Click(object sender, EventArgs e)
+        {
+            fname.Text = UserInfo["DirectSmile"].ToString();
+            add.Text = AddInfo["Address1"].ToString();
+            city.Text = AddInfo["City"].ToString();
+            st.Text = AddInfo["State"].ToString();
+            zip.Text = AddInfo["Zip"].ToString();
+            phn.Text = AddInfo["Phone"].ToString();
+            email.Text = AddInfo["Email"].ToString();
         }
     }
 }
