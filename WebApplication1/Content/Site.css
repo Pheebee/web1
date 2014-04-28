@@ -54,14 +54,14 @@ input[type="password"] {
     color: #FFFFFF !important;
 }
 
-/*.jumbotron, .container .jumbotron {
+.jumbotron, .container .jumbotron {
     background-color:#000;
     border-radius:5px;
     height:175px;
     padding:0;
     margin-top:15px;
     min-width: 970px;
-}*/
+}
 
 .imgNoPad {
     padding:0 !important;
@@ -72,7 +72,7 @@ table.radio td {
     vertical-align: top;
 }
 
-/*.footer {
+.footer {
     background-color:#333333;
     border-top:3px solid #e84405;
     color:#fff;
@@ -99,7 +99,7 @@ table.radio td {
 
 a:link, a:visited {
     color:#e84405;
-}*/
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

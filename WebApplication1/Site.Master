@@ -43,7 +43,7 @@
                 <div class="navbar-header col-md-12">
                     <div class="pull-left">
                         <ul class="nav navbar-nav">
-                            <li><a runat="server" href="~/" class="imgNoPad"></a></li>
+                            <li><a runat="server" href="~/" class="imgNoPad"><img src="/Images/ball.jpg" /></a></li>
                              <% if(System.Web.HttpContext.Current.User.Identity.IsAuthenticated && System.Web.HttpContext.Current.User.Identity.Name.ToLower() != "admin") {  %>
                             <li><a runat="server" href="~/">Home</a></li>
                             <li><a runat="server" href="~/Benefits">Benefits</a></li>

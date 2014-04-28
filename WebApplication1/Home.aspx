@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        
+        <center><img src="/Images/header.jpg" /></center>
     </div>
     <div class="">
         <p>Dear <%# UserInfo["Salutation"].ToString() %>,</p>
@@ -13,7 +13,7 @@
         <p>Season Ticket Members are the lifeblood of a professional franchise. Your continued support and commitment to the team are extraordinary. I burst with pride at NBA meetings when our season ticket performance is reported, but as impressive as those numbers are, they in no way can describe the energy and passion that our Season Ticket Members deliver every game. We are very fortunate indeed.</p>
 		<p>Thank you for engaging in the renewal process, and please don't hesitate to contact me personally if I can answer any question or provide additional information.</p>
 		<p>Sincerely,<br />
-			<img src="img/CB_sig.png" alt="C. D. Bennett" /></p>
+		</p>
 		<p>Clay T. Owner<br />
 		Chairman and Chief Executive Officer<br />
 		Florida Flames Organization</p>
